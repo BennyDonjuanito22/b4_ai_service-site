@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Sprint - Done-For-You Content in 48 Hours</title>
+    <meta name="description" content="Get 30 days of AI-powered content created in 48 hours. Perfect for busy founders and creators.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            background: #f7fafc;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        .cta-primary {
+            display: inline-block;
+            background: white;
+            color: #805ad5;
+            padding: 18px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+        }
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,255,255,0.4);
+        }
+        .section {
+            background: white;
+            padding: 80px 40px;
+            margin: 40px 0;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #805ad5;
+        }
+        .process {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+        .step {
+            text-align: center;
+            padding: 30px;
+        }
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: 800;
+            margin: 0 auto 20px;
+        }
+        .step-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+        .deliverables {
+            background: #f7fafc;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+        .deliverables h3 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: #2d3748;
+        }
+        ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        li {
+            padding: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.1em;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #38a169;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        .pricing-card {
+            background: white;
+            border: 3px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .pricing-card.featured {
+            border-color: #805ad5;
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(128, 90, 213, 0.2);
+        }
+        .plan-name {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+        .price {
+            font-size: 3em;
+            font-weight: 800;
+            color: #805ad5;
+            margin: 20px 0;
+        }
+        .guarantee {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        .guarantee h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #718096;
+        }
+        footer a {
+            color: #805ad5;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .process { grid-template-columns: 1fr; }
+            .pricing-cards { grid-template-columns: 1fr; }
+            .pricing-card.featured { transform: scale(1); }
+        }
+    </style>
+<!-- Google Analytics (GA4) - Measurement ID to be set by Kiki via KIKI-G11 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="badge">⚡ 48-Hour Turnaround</div>
+            <h1>AI Content Sprint</h1>
+            <p class="subtitle">30 days of content. Created in 48 hours. Zero effort required.</p>
+            <a href="#pricing" class="cta-primary">Book Your Sprint →</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>How It Works</h2>
+            <div class="process">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Intake Call</div>
+                    <p>30-minute session to understand your brand, audience, and goals.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">AI Generation</div>
+                    <p>Our system creates 30+ pieces of content using your brand voice.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Review & Refine</div>
+                    <p>You approve, we polish. One round of edits included.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Delivery</div>
+                    <p>Get your content calendar, captions, and assets in Notion.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>What You Get</h2>
+            <div class="deliverables">
+                <h3>📦 Complete Content Package</h3>
+                <ul>
+                    <li>30 social media posts (Instagram, Twitter, LinkedIn)</li>
+                    <li>10 video scripts for TikTok/Reels</li>
+                    <li>5 email newsletters with subject lines</li>
+                    <li>Content calendar with optimal posting times</li>
+                    <li>Branded templates and graphics</li>
+                    <li>Hashtag research and SEO optimization</li>
+                    <li>One round of revisions included</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="pricing">
+            <h2>Choose Your Sprint</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="plan-name">Starter</div>
+                    <div class="price">$497</div>
+                    <ul style="text-align: left; border: none;">
+                        <li>15 social posts</li>
+                        <li>5 video scripts</li>
+                        <li>3 email drafts</li>
+                        <li>48-hour delivery</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});" class="cta-primary" style="margin-top: 30px; display: block;">Book Starter</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="plan-name">⭐ Pro (Most Popular)</div>
+                    <div class="price">$997</div>
+                    <ul style="text-align: left;">
+                        <li>30 social posts</li>
+                        <li>10 video scripts</li>
+                        <li>5 email newsletters</li>
+                        <li>Content calendar</li>
+                        <li>Branded templates</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});" class="cta-primary" style="margin-top: 30px; display: block; background: #805ad5; color: white;">Book Pro Sprint</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="plan-name">Enterprise</div>
+                    <div class="price">Custom</div>
+                    <ul style="text-align: left;">
+                        <li>60+ social posts</li>
+                        <li>20+ video scripts</li>
+                        <li>10+ emails</li>
+                        <li>Multi-platform strategy</li>
+                        <li>Ongoing support</li>
+                        <li>Dedicated manager</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});" class="cta-primary" style="margin-top: 30px; display: block;">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="guarantee">
+            <h3>💯 100% Satisfaction Guarantee</h3>
+            <p style="font-size: 1.2em; margin-top: 20px;">Not happy with your content? We'll revise until you are, or give you a full refund. No questions asked.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 SprintAI Studio. All rights reserved.</p>
+        <p>
+            <a href="https://sprintaistudios.com/terms.html">Terms</a> |
+            <a href="https://sprintaistudios.com/privacy.html">Privacy</a> |
+            <a href="https://sprintaistudios.com/refunds.html">Refund Policy</a>
+        </p>
+    </footer>
+
+    <script>
+        fetch('/events/track', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                business_slug: 'b4_ai_service',
+                event_type: 'page_view',
+                referrer: document.referrer,
+                device: /mobile/i.test(navigator.userAgent) ? 'mobile' : 'desktop'
+            })
+        }).catch(() => {});
+
+        document.querySelectorAll('.cta-primary').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (btn.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    alert('Booking coming soon! Email support@sprintaistudios.com to reserve your sprint.');
+                }
+                fetch('/events/track', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        business_slug: 'b4_ai_service',
+                        event_type: 'cta_click',
+                        metadata: { plan: btn.textContent }
+                    })
+                }).catch(() => {});
+            });
+        });
+    </script>
+</body>
+</html>
